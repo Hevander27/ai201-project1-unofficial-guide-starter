@@ -10,7 +10,7 @@
 ## Domain
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
-
+> DACA immigration FAQ and wait times
 ---
 
 ## Documents
@@ -18,9 +18,19 @@
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
+>https://www.reddit.com/r/DACA/comments/1u0sn86/update_6_something_big_and_weird_happened_this/>https://travel.state.gov/content/travel/en/News/visas-news/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html
+>https://www.whitehouse.gov/presidential-actions/2025/12/restricting-and-limiting-the-entry-of-foreign-nationals-to-protect-the-security-of-the-united-states/
+>https://www.sglegalgroup.com/blog/new-uscis-enhanced-background-checks-what-applicants-with-pending-cases-need-to-know
+>https://www.reddit.com/r/DACA/comments/1tzujv5/approval_mega_thread_please_post_all_approvals/
+>https://www.boundless.com/blog/daca-reddit-faqs
+>https://www.nilc.org/articles/why-some-daca-renewals-are-taking-longer-and-what-you-can-do/
+
+
+
+
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
+| 1 |        |             |               |
 | 2 | | | |
 | 3 | | | |
 | 4 | | | |
