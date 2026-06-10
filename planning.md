@@ -202,9 +202,9 @@ all-MiniLM-L6-v2 fits this corpus well: the documents are short-to-medium study-
                       ▼
 ┌──────────────────────────────────────────────────────┐
 │  5. GENERATION                                       │
-│  Anthropic API (claude-sonnet-4) + Gradio UI         │
-│  Chunks injected as numbered context; answer cites   │
-│  source and date-qualifies time-sensitive claims     │
+│  Groq (llama-3.3-70b-versatile) + Gradio UI          │
+│  Numbered context; grounded "context-only" prompt;   │
+│  sources attached programmatically from chunks       │
 └──────────────────────────────────────────────────────┘
 ---
 
@@ -221,10 +221,10 @@ all-MiniLM-L6-v2 fits this corpus well: the documents are short-to-medium study-
      with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
-Input to Claude: Documents list + Chunking Strategy section. Ask it to implement scrape_document(url, source_type) using requests/BeautifulSoup, ingest_reddit(url) using PRAW, and chunk_text(text, chunk_size=450, overlap=60, source_type=None) using tiktoken with Q&A boundary splitting for FAQ docs and comment-by-comment splitting for the Mega Thread. Verify by running one URL from each source type and inspecting that chunks are complete and correctly tagged.
+Input to Claude: Documents list + Chunking Strategy section + pipeline diagram. Asked it to implement `src/ingest.py` (load local `.txt` via utf-8-sig and `.pdf` via pdfplumber; clean HTML entities, smart quotes, and the BOM; strip repeated PDF headers/footers; and reconstruct two-column PDF pages row-by-row so the columns aren't interleaved) and `src/chunk.py` (`chunk_text` at 250 tokens / 45 overlap using the all-MiniLM-L6-v2 tokenizer, sentence-aware boundaries, with reference/bibliography chunks filtered out and each chunk tagged with its source filename). Verified by inspecting 5 random chunks for empty/HTML/scrambled output and correct metadata — final corpus: **526 chunks** across 12 documents.
 
 **Milestone 4 — Embedding and retrieval:**
-Input to Claude: Retrieval Approach section + chunk schema from Milestone 3. Ask it to implement embed_chunks() using sentence-transformers, build_index() storing vectors in FAISS with a JSON metadata sidecar, and retrieve_top_k(query, k=6). Verify by running the 5 evaluation questions and checking that at least 4 of 6 returned chunks are topically relevant.
+Input to Claude: Retrieval Approach section + chunk schema. Asked it to implement `src/embed.py` (embed all chunks with all-MiniLM-L6-v2 into a persistent ChromaDB collection using cosine distance, with `source` + `position` metadata) and `src/retrieve.py` (`retrieve_top_k(query, k=6)` returning chunk text + source + distance). Verified by running the 5 evaluation questions and checking top distances < 0.5 — this surfaced two questions whose source content was missing from the corpus, fixed by adding the Newport pseudo-work text and the 2357 spaced-repetition page.
 
 **Milestone 5 — Generation and interface:**
-Input to Claude: Evaluation Plan table + retrieve_top_k output schema. Ask it to implement generate_answer(query, chunks) that injects chunks as numbered context blocks with source citation instructions, plus a Gradio UI with query input, answer display, and expandable Sources section. Verify by running all 5 evaluation questions end-to-end and checking answers match expected results with proper source attribution.
+Input to Claude: grounding requirement + `retrieve_top_k` schema + Gradio skeleton. Asked it to implement `src/generate.py` (`ask(query)` that injects retrieved chunks as numbered context under a context-only system prompt with an exact decline sentence, calls Groq `llama-3.3-70b-versatile` at temperature 0, and attaches source attribution programmatically from the retrieved chunks) plus `app.py` (Gradio UI). Verified end-to-end on all 5 evaluation questions plus an out-of-corpus question, confirming grounded answers with cited sources and an explicit decline when the corpus lacks the answer.
