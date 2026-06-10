@@ -5,6 +5,7 @@ ingest documents → chunk → embed into ChromaDB → retrieve → generate a g
 answer with Groq. Run the interface with `python app.py` (see the bottom of this file).
 
 ---
+<img width="1489" height="744" alt="Screenshot 2026-06-10 at 5 17 30 PM" src="https://github.com/user-attachments/assets/d057d433-47a9-48ec-81aa-e533b7e8e6b3" />
 
 [![First Project AI201](https://imgur.com/vhWYNGl)](https://imgur.com/a/tRIZoZx)
 
