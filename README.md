@@ -6,7 +6,7 @@ answer with Groq. Run the interface with `python app.py` (see the bottom of this
 
 ---
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/tRIZoZx"  ><a href="//imgur.com/a/tRIZoZx">First Project AI201</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[Watch the demo](https://imgur.com/a/tRIZoZx)
 
 ## Domain
 
