@@ -6,6 +6,8 @@ answer with Groq. Run the interface with `python app.py` (see the bottom of this
 
 ---
 
+file:///Users/hevanderdacosta/Downloads/Screen%2520Recording%2520-%2520Jun%252010%252C%25202026.mp4
+
 ## Domain
 
 **How to Become a Straight-A Student — study techniques, time management, and academic performance.**
