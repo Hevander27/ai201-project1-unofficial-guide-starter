@@ -6,7 +6,7 @@ answer with Groq. Run the interface with `python app.py` (see the bottom of this
 
 ---
 
-[Watch the demo](https://imgur.com/a/tRIZoZx)
+[![Watch Demo](https://i.imgur.com/yourThumbnailID.jpg)](https://imgur.com/a/tRIZoZx)
 
 ## Domain
 
