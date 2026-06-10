@@ -52,34 +52,69 @@ def load_pdf(path: Path) -> str:
 
 
 def _extract_page(page) -> str:
-    """Extract one page, handling two-column layouts.
+    """Extract one page, reconstructing reading order for two-column layouts.
 
     pdfplumber reads across the full page width row by row, so a two-column
     page comes out with the left and right columns interleaved line-by-line
-    (scrambled prose). When a page has two clear columns - words split between
-    the halves and almost none crossing the centerline gutter - we extract each
-    column separately and concatenate them. Single-column pages (title pages,
-    full-width tables) are extracted whole.
+    (scrambled prose). We instead group words into rows, then:
+      - a row whose words cross the centerline is full-width (title, heading,
+        footer) and is emitted as-is, in place;
+      - consecutive two-column rows form a block, and we emit the whole left
+        column top-to-bottom, then the whole right column.
+    This handles mixed pages (single-column abstract on top, two-column body
+    below) correctly, which a per-page "is it two-column?" guess cannot.
 
     x_tolerance=1: pdfplumber's default (3) drops spaces in these PDFs, gluing
     words together ("Spacedrepetition"); 1 restores them.
     """
-    width, height = page.width, page.height
-    center = width / 2
-    words = page.extract_words()
+    center = page.width / 2
+    words = page.extract_words(x_tolerance=1)
     if not words:
         return ""
 
-    crossing = sum(1 for w in words if w["x0"] < center < w["x1"])
-    left = sum(1 for w in words if w["x1"] <= center)
-    right = sum(1 for w in words if w["x0"] >= center)
-    two_column = crossing <= 0.04 * len(words) and left > 0 and right > 0
+    # Group words into rows by vertical position (words within 3pt of top).
+    words.sort(key=lambda w: (round(w["top"]), w["x0"]))
+    rows: list[list[dict]] = []
+    for w in words:
+        if rows and abs(w["top"] - rows[-1][0]["top"]) <= 3:
+            rows[-1].append(w)
+        else:
+            rows.append([w])
 
-    if two_column:
-        lt = page.within_bbox((0, 0, center, height)).extract_text(x_tolerance=1) or ""
-        rt = page.within_bbox((center, 0, width, height)).extract_text(x_tolerance=1) or ""
-        return lt + "\n" + rt
-    return page.extract_text(x_tolerance=1) or ""
+    def crosses(row):  # a word straddling the centerline => full-width row
+        return any(w["x0"] < center < w["x1"] for w in row)
+
+    two_col_rows = sum(
+        1 for r in rows if not crosses(r)
+        and any(w["x1"] <= center for w in r)
+        and any(w["x0"] >= center for w in r)
+    )
+    # Not enough two-column structure: trust pdfplumber's normal reading order.
+    if two_col_rows < 5:
+        return page.extract_text(x_tolerance=1) or ""
+
+    out: list[str] = []
+    block: list[list[dict]] = []
+
+    def flush_block():
+        if not block:
+            return
+        left = [w for r in block for w in r if w["x1"] <= center]
+        right = [w for r in block for w in r if w["x0"] >= center]
+        for column in (left, right):
+            if column:
+                out.append(" ".join(w["text"] for w in column))
+        block.clear()
+
+    for r in rows:
+        if crosses(r):
+            flush_block()
+            out.append(" ".join(w["text"] for w in sorted(r, key=lambda w: w["x0"])))
+        else:
+            block.append(r)
+    flush_block()
+
+    return "\n".join(t for t in out if t.strip())
 
 
 def _strip_pdf_boilerplate(pages: list[str]) -> str:
