@@ -6,7 +6,7 @@ answer with Groq. Run the interface with `python app.py` (see the bottom of this
 
 ---
 
-file:///Users/hevanderdacosta/Downloads/Screen%2520Recording%2520-%2520Jun%252010%252C%25202026.mp4
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/tRIZoZx"  ><a href="//imgur.com/a/tRIZoZx">First Project AI201</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ## Domain
 
