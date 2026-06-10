@@ -10,8 +10,9 @@
 ## Domain
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
-DACA (Deferred Action for Childhood Arrivals) — renewal timelines, legal status, and policy updates
-This domain was chosen because DACA recipients face urgent, high-stakes decisions that official channels communicate poorly. USCIS.gov is vague about processing times, lags behind court developments, and doesn't capture real-world wait experiences. 
+**How to Become a Straight-A Student — study techniques, time management, and academic performance**
+
+This domain was chosen because students looking to improve their grades often get generic or conflicting advice from official academic channels (syllabi, tutoring centers, university websites). The most actionable knowledge — specific techniques like active recall, spaced repetition, the Pomodoro method, and pseudo-work avoidance — is scattered across blogs, research papers, and community forums rather than consolidated in one place. A RAG system over these sources can surface specific, evidence-backed answers that a university advising page simply wouldn't.
 ---
 
 ## Documents
@@ -20,70 +21,59 @@ This domain was chosen because DACA recipients face urgent, high-stakes decision
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
 
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| #   | Source                                                   | Description                                      |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| OFFICIAL / GOVERNMENT                                                                                             |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 1   | https://www.uscis.gov/i-821d                             | USCIS DACA page: renewal guidance, 80+ FAQ,      |
-|     |                                                          | form instructions                                |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 2   | https://egov.uscis.gov/processing-times/                 | Live processing times by form and service center |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 3   | https://www.federalregister.gov                          | 2022 DACA Final Rule and subsequent rulemaking   |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 4   | whitehouse.gov/presidential-actions/2025/12/             | Dec 2025 executive order restricting foreign     |
-|     | restricting-and-limiting-the-entry...                    | national entry; advance parole risk context      |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 5   | travel.state.gov/…/suspension-of-visa-issuance…          | State Dept. visa suspension; enforcement climate |
-|     |                                                          | context for DACA holders                         |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| LEGAL & ADVOCACY                                                                                                  |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 6   | https://www.nilc.org/resources/latest-daca-developments/ | NILC court decision and injunction tracker       |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 7   | nilc.org/articles/why-some-daca-renewals-are-taking-     | NILC March 2026: delay causes and recipient      |
-|     | longer-and-what-you-can-do/                              | action steps                                     |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 8   | https://www.ilrc.org/daca                                | ILRC toolbox: eligibility explainers, practice   |
-|     |                                                          | alerts, policy memos through 2026                |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 9   | https://www.nwirp.org/daca/                              | NWIRP community advisories and renewal guidance  |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 10  | sglegalgroup.com/blog/new-uscis-enhanced-                | Expanded FBI background checks starting          |
-|     | background-checks…                                       | April 27, 2026; impact on pending renewals       |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 11  | https://www.boundless.com/blog/daca-reddit-faqs          | Top 12 Reddit DACA questions answered by         |
-|     |                                                          | immigration experts                              |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 12  | https://immigrantsrising.org                             | Step-by-step first-time and renewal guides       |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 13  | https://www.americanimmigrationcouncil.org               | DACA fact sheets and litigation history          |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 14  | https://www.fwd.us                                       | Policy explainers and Dreamer advocacy updates   |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 15  | https://www.aila.org                                     | Processing time tracking and attorney guidance   |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| REDDIT / COMMUNITY                                                                                                |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 16  | reddit.com/r/DACA/comments/1tzujv5/                      | Approval Mega Thread; best crowdsourced          |
-|     | approval_mega_thread…                                    | filing-to-approval timeline data                 |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 17  | reddit.com/r/DACA/comments/1u0sn86/                      | Community thread documenting unusual DACA        |
-|     | update_6_something_big_and_weird…                        | processing anomaly                               |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 18  | r/DACA (reddit.com/r/DACA)                               | Primary hub; users post filing dates, biometrics,|
-|     |                                                          | and approval timelines                           |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 19  | r/immigration (reddit.com/r/immigration)                 | Personal renewal experiences and attorney        |
-|     |                                                          | commentary                                       |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 20  | r/Dreamers (reddit.com/r/Dreamers)                       | Lived renewal experiences and practical advice   |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 21  | r/ImmigrationLaw (reddit.com/r/ImmigrationLaw)           | Procedural delays and escalation options         |
-+-----+----------------------------------------------------------+--------------------------------------------------+
-| 22  | r/AskImmigration (reddit.com/r/AskImmigration)           | Q&A format; individual-situation questions       |
-+-----+----------------------------------------------------------+--------------------------------------------------+
++-----+--------------------------------------------+--------------------------------------------------+
+| #   | Source                                     | Description                                      |
++-----+--------------------------------------------+--------------------------------------------------+
+| BOOK                                                                                                  |
++-----+--------------------------------------------+--------------------------------------------------+
+| 1   | How to Become a Straight-A Student         | Cal Newport; core framework: pseudo-work,        |
+|     | — Cal Newport (2006)                       | focus intensity, time management, and            |
+|     |                                            | exam/paper strategies based on real student      |
+|     |                                            | interviews                                       |
++-----+--------------------------------------------+--------------------------------------------------+
+| BLOGS & ARTICLES                                                                                      |
++-----+--------------------------------------------+--------------------------------------------------+
+| 2   | examstudyexpert.com/study-tips/            | 51 proven study tips: retrieval practice,        |
+|     |                                            | spaced repetition, "eat the frog" technique,     |
+|     |                                            | and scheduling guilt-free rest                   |
++-----+--------------------------------------------+--------------------------------------------------+
+| 3   | kortext.com/student-hub/study-tips/        | 10 time management strategies for students:      |
+|     | ten-effective-time-management-             | Pomodoro technique, goal-setting before          |
+|     | strategies-for-successful-studying/        | sessions, and breaking tasks into smaller chunks |
++-----+--------------------------------------------+--------------------------------------------------+
+| 4   | queensonlineschool.com/                    | 8 student-centered time management techniques:   |
+|     | time-management-for-students/              | time blocking, Pomodoro, and the Eisenhower      |
+|     |                                            | Matrix with practical examples                   |
++-----+--------------------------------------------+--------------------------------------------------+
+| 5   | xmind.com/blog/best-study-techniques       | Top 5 learning strategies for 2025: active       |
+|     |                                            | reading, the Feynman Technique, visualization,   |
+|     |                                            | and long-term retention methods                  |
++-----+--------------------------------------------+--------------------------------------------------+
+| 6   | bcu.ac.uk/exams-and-revision/              | Birmingham City University: what active recall   |
+|     | best-ways-to-revise/active-recall          | is, how it strengthens neural connections, and   |
+|     |                                            | how to combine it with spaced repetition         |
++-----+--------------------------------------------+--------------------------------------------------+
+| 7   | bcu.ac.uk/exams-and-revision/              | Birmingham City University: spaced repetition    |
+|     | best-ways-to-revise/spaced-repetition      | and the 2357 method — reviewing material at      |
+|     |                                            | increasing intervals based on the forgetting     |
+|     |                                            | curve                                            |
++-----+--------------------------------------------+--------------------------------------------------+
+| 8   | 5staressays.com/blog/                      | Active recall vs. passive reading: 2024 study    |
+|     | active-recall-vs-passive-reading           | of 500 college students found active recall      |
+|     |                                            | led to 23% higher final exam scores              |
++-----+--------------------------------------------+--------------------------------------------------+
+| PDFs                                                                                                  |
++-----+--------------------------------------------+--------------------------------------------------+
+| 9   | hpe.researchcommons.org/cgi/viewcontent    | Peer-reviewed paper (2025): active recall and    |
+|     | .cgi?article=1348&context=journal          | spaced repetition vs. traditional study methods; |
+|     |                                            | also covers sleep and diet as academic           |
+|     |                                            | performance factors                              |
++-----+--------------------------------------------+--------------------------------------------------+
+| 10  | sciencedirect.com/science/article/abs/     | ScienceDirect study (2025): spaced repetition    |
+|     | pii/S187712972500231X                      | and active recall among pharmacy students;       |
+|     |                                            | evidence that retrieval-based learning           |
+|     |                                            | outperforms passive review significantly         |
++-----+--------------------------------------------+--------------------------------------------------+
 ---
 
 ## Chunking Strategy
@@ -93,11 +83,12 @@ This domain was chosen because DACA recipients face urgent, high-stakes decision
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size: 400-500 tokens**
-**Overlap: 50–75 tokens**
-**Reasoning:**
-Reddit posts are short and self-contained — 400 tokens captures a complete timeline post without splitting it. The Approval Mega Thread should be parsed comment-by-comment since each comment is a discrete data point. Legal/advocacy documents (NILC, ILRC) are paragraph-structured; 400–500 tokens maps to one concept or ruling per chunk — smaller chunks would split court rulings mid-explanation. FAQ documents (USCIS, Boundless) should be chunked by Q&A pair where possible. Executive orders (#4, #5) warrant the full 75-token overlap since legal conditions often span paragraph transitions. The overlap generally guards against facts straddling boundaries — e.g., "processing times have increased significantly" followed by the actual numbers in the next sentence.
+**Chunk size: 400–500 tokens**
 
+**Overlap: 50–75 tokens**
+
+**Reasoning:**
+Blog posts and articles (Exam Study Expert, Kortext, Queen's Online School) are paragraph-structured with one technique or concept per paragraph — 400–500 tokens maps naturally to one complete idea per chunk. Smaller chunks would split mid-explanation, e.g., a description of the Pomodoro method cut before the step-by-step instructions. Academic PDFs (ScienceDirect, Health Professions Education) are denser and more formal; the full 75-token overlap is warranted here since key findings often span paragraph transitions (e.g., a claim followed by its supporting data in the next paragraph). The book (Newport) should be chunked by section or subsection where possible, since each addresses a distinct strategy. The overlap generally guards against technique explanations straddling boundaries — e.g., "active recall strengthens memory" followed by the specific how-to steps in the next sentence.
 ---
 
 ## Retrieval Approach
@@ -125,25 +116,27 @@ all-MiniLM-L6-v2 fits this corpus well: documents are short-to-medium length, it
      Questions should be specific enough that you can judge whether the system's response
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
-
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
 | # | Question                                       | Expected answer                                                                 |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
-| 1 | How long are DACA renewals taking in 2026?     | 6–12+ months real-world per Reddit Mega Thread and NILC March 2026 article;     |
-|   |                                                | congressional letters from March–April 2026 confirm recipients expiring while   |
-|   |                                                | waiting                                                                         |
+| 1 | What is pseudo-work and why does it hurt       | Pseudo-work is studying in distracted, low-focus environments for long hours    |
+|   | academic performance?                          | without retaining much; Cal Newport argues intensity of focus x time = actual   |
+|   |                                                | work done, so long unfocused sessions produce less than short focused ones      |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
-| 2 | Can someone apply for DACA for the first time  | No — initial applications frozen since Judge Hanen's July 2021 order; USCIS    |
-|   | right now?                                     | accepts the fee but does not adjudicate                                         |
+| 2 | How does active recall compare to re-reading   | A 2024 study of 500 college students found active recall led to 23% higher      |
+|   | for exam performance?                          | final exam scores; re-reading creates false familiarity without strengthening   |
+|   |                                                | memory retrieval pathways                                                       |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
-| 3 | What did the Fifth Circuit rule on DACA in     | Upheld APA violation finding; narrowed injunction to Texas only and to work     |
-|   | January 2025?                                  | authorization, not deferred action itself                                       |
+| 3 | What is the 2357 spaced repetition method      | Review material the day after a lesson, 2 days later, 3 days later, then 7      |
+|   | and how do I use it?                           | days later; each review should use active recall rather than passive re-reading |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
-| 4 | When should I submit my DACA renewal?          | 120–150 days before expiration per USCIS; Reddit community recommends the full  |
-|   |                                                | 150 days given current delays                                                   |
+| 4 | How does the Pomodoro Technique help           | Work in 25-minute focused intervals followed by a 5-minute break; after 4       |
+|   | students manage study time?                    | intervals take a 15–30 minute break; prevents burnout and trains sustained      |
+|   |                                                | concentration                                                                   |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
-| 5 | How do the new USCIS background checks affect  | Expanded FBI checks starting April 27, 2026 may add review time to             |
-|   | my pending renewal?                            | already-delayed pending cases                                                   |
+| 5 | What does the Feynman Technique involve        | Explain a concept in simple terms as if teaching it to someone else; gaps in    |
+|   | and when should I use it?                      | your explanation reveal gaps in understanding; best used after initial reading  |
+|   |                                                | to confirm true comprehension vs surface familiarity                            |
 +---+------------------------------------------------+---------------------------------------------------------------------------------+
 ---
 
@@ -153,11 +146,10 @@ all-MiniLM-L6-v2 fits this corpus well: documents are short-to-medium length, it
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-Anticipated Challenges
 
-1. Outdated Reddit timelines. Posts from 2021–2023 showing 2–3 month waits will be retrieved alongside 2026 posts showing 10+ months. The Approval Mega Thread must be tagged at the comment level, not just the thread level. Mitigation: attach post_date metadata to every chunk and surface it in the generation prompt.
+1. **Conflicting advice across sources.** A blog post claiming "study more hours" directly contradicts Newport's pseudo-work argument that intensity matters more than time. The LLM may retrieve both and generate a muddled or contradictory answer. Mitigation: tag each chunk with source type (research-backed vs. general advice blog) and surface it in the prompt so the model can weight evidence-based sources more heavily.
 
-2. Vocabulary mismatch between legal and community sources. NILC's "work authorization component of the Fifth Circuit's narrowed injunction" and a Reddit post's "they can still take your EAD even if your DACA is fine" describe the same fact with zero shared vocabulary. Mitigation: ensure legal sources aren't drowned out by Reddit volume; consider source-type weighting in retrieval scoring.
+2. **Technique names used inconsistently across sources.** "Active recall," "retrieval practice," and "self-quizzing" all describe the same method but share no exact vocabulary. A query about "self-testing" may miss chunks that only use "retrieval practice." Mitigation: during ingestion, add a short normalized tag (e.g., technique: active_recall) to relevant chunks so retrieval isn't purely dependent on surface wording matching.
 
 ---
 
