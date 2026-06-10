@@ -6,8 +6,12 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.venv*/
 venv/
 env/
+
+# Regenerable intermediate text (raw extraction from data/documents/)
+data/raw/
 
 # Jupyter
 .ipynb_checkpoints/

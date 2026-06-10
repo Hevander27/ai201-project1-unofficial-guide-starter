@@ -83,12 +83,16 @@ This domain was chosen because students looking to improve their grades often ge
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size: 400–500 tokens**
+**Chunk size: 250 tokens (hard cap)**
 
-**Overlap: 50–75 tokens**
+**Overlap: 45 tokens**
+
+**Token counter: the all-MiniLM-L6-v2 tokenizer itself (not tiktoken or word count)**
 
 **Reasoning:**
-Blog posts and articles (Exam Study Expert, Kortext, Queen's Online School) are paragraph-structured with one technique or concept per paragraph — 400–500 tokens maps naturally to one complete idea per chunk. Smaller chunks would split mid-explanation, e.g., a description of the Pomodoro method cut before the step-by-step instructions. Academic PDFs (ScienceDirect, Health Professions Education) are denser and more formal; the full 75-token overlap is warranted here since key findings often span paragraph transitions (e.g., a claim followed by its supporting data in the next paragraph). The book (Newport) should be chunked by section or subsection where possible, since each addresses a distinct strategy. The overlap generally guards against technique explanations straddling boundaries — e.g., "active recall strengthens memory" followed by the specific how-to steps in the next sentence.
+The chunk size is capped at 250 tokens because all-MiniLM-L6-v2 truncates any input beyond 256 tokens before embedding. A larger chunk (e.g., the 400–500 originally planned) would lose its entire tail at embed time — the vector would represent only the first ~256 tokens and retrieval would silently ignore the rest. Counting with the model's *own* tokenizer, rather than tiktoken (OpenAI's scheme) or a word-count approximation, guarantees the 250 number means exactly what the embedder sees, so the 256-token ceiling is genuinely enforced.
+
+The corpus is study-skills articles (blog-style prose on study tips, time management, active recall, and spaced repetition) plus two academic PDFs on study habits and learning strategies. These are paragraph-structured, with one technique or concept per paragraph, so ~250 tokens maps to roughly one self-contained technique-plus-explanation — the granularity a query like "what is active recall?" should match. The 45-token overlap guards against a technique straddling a boundary, e.g., "active recall strengthens memory" at the end of one chunk and the how-to steps at the start of the next. This is deliberately smaller than a long-reference chunking scheme would use, because these are short, self-contained how-to passages rather than dense reference documents.
 ---
 
 ## Retrieval Approach
@@ -105,7 +109,7 @@ Blog posts and articles (Exam Study Expert, Kortext, Queen's Online School) are 
 **Top-k: 6**
 
 **Production tradeoff reflection:**
-all-MiniLM-L6-v2 fits this corpus well: documents are short-to-medium length, it handles informal and semi-formal English effectively, and it has no API cost — important for a corpus needing frequent re-indexing as court decisions and Reddit posts accumulate. At k=6, the LLM gets enough context to synthesize across source types (e.g., NILC legal update + Reddit timeline) without noise. Semantic search handles the vocabulary mismatch between formal legal language and Reddit slang — both map to similar vectors when the underlying meaning is shared. If cost were no constraint, text-embedding-3-large or voyage-large-2 would offer better accuracy on dense legal text and longer context windows; multilingual-e5-large would support Spanish-language queries from bilingual recipients.
+all-MiniLM-L6-v2 fits this corpus well: the documents are short-to-medium study-skills articles and academic papers in standard English, the model handles that register effectively, and it runs locally with no API cost — useful for a corpus that gets re-indexed as new study guides are added. At k=6, the LLM gets enough context to synthesize across source types (e.g., a blog's how-to steps plus a research paper's supporting evidence) without pulling in noise. Semantic search bridges the vocabulary mismatch between sources — "active recall," "retrieval practice," and "self-quizzing" map to nearby vectors despite sharing no exact words. If cost were no constraint, a larger model like text-embedding-3-large or voyage-large-2 would offer better accuracy on the denser academic PDFs and a longer context window — which would also relax the 256-token truncation that currently caps chunk size; a multilingual model such as multilingual-e5-large would let non-native-English students query in their first language.
 
 
 ---
@@ -169,16 +173,16 @@ all-MiniLM-L6-v2 fits this corpus well: documents are short-to-medium length, it
                       ▼
 ┌──────────────────────────────────────────────────────┐
 │  1. DOCUMENT INGESTION                               │
-│  requests + BeautifulSoup, PRAW (Reddit)             │
-│  Tag: source_url, source_type, date_scraped          │
+│  Load local .txt / .pdf (pdfplumber for PDFs)        │
+│  Clean -> data/clean/; filename = source             │
 └─────────────────────┬────────────────────────────────┘
                       │
                       ▼
 ┌──────────────────────────────────────────────────────┐
 │  2. CHUNKING                                         │
-│  tiktoken + custom chunk_text()                      │
-│  400–500 tokens, 50–75 overlap                       │
-│  Q&A split for FAQs; comment split for Mega Thread   │
+│  all-MiniLM-L6-v2 tokenizer + chunk_text()           │
+│  250 tokens (cap), 45 overlap                        │
+│  Paragraph-aware split (articles + PDFs)             │
 └─────────────────────┬────────────────────────────────┘
                       │
                       ▼
