@@ -188,15 +188,15 @@ all-MiniLM-L6-v2 fits this corpus well: the documents are short-to-medium study-
                       ▼
 ┌──────────────────────────────────────────────────────┐
 │  3. EMBEDDING + VECTOR STORE                         │
-│  sentence-transformers (all-MiniLM-L6-v2) + FAISS   │
-│  384-dim vectors; JSON sidecar for metadata          │
+│  sentence-transformers (all-MiniLM-L6-v2) + ChromaDB │
+│  384-dim vectors; source + position metadata         │
 └─────────────────────┬────────────────────────────────┘
                       │
                       ▼
 ┌──────────────────────────────────────────────────────┐
 │  4. RETRIEVAL                                        │
-│  FAISS cosine similarity, retrieve_top_k(k=6)        │
-│  Returns chunks with source URL + date metadata      │
+│  ChromaDB cosine distance, retrieve_top_k(k=6)       │
+│  Returns chunks + source + distance score            │
 └─────────────────────┬────────────────────────────────┘
                       │
                       ▼

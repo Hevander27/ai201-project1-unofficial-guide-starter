@@ -19,6 +19,7 @@ data/raw/
 # ChromaDB local storage
 chroma_db/
 chroma/
+data/chroma_db/
 
 # macOS
 .DS_Store

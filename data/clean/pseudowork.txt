@@ -1,0 +1,29 @@
+The Straight-A Gospels: Pseudo-Work Does Not Equal Work
+July 26, 2007
+This is the first post in a three-part series focusing on the Straight-A Gospels - the core concepts behind my book, How to Become a Straight-A Student.
+Today we focus on Gospel #1: Pseudo-work does not equal work
+Here are two facts: (1) I made straight A's in college. (2) I studied less than most people I know. The same holds true for many of the straight-A students I researched for my book. If this sounds unbelievable, it is probably because you subscribe to the following formula:
+work accomplished = time spent studying
+The more time you study the more work you accomplish. The more work you accomplish, the better your grades. Ergo, straight A's imply more work. Right? Then how do you explain me and my interview subjects...
+To understand our accomplishment, you must understand the following, more accurate formula:
+work accomplished = time spent x intensity of focus
+That last factor - intensity of focus - is the key to explaining why straight-A students never seem to embark on the same fatigue-saturated all-night study adventures that most undergrads rely on. Let's take a specific example. Assume that you have a paper to write. The standard approach is to camp out in the library the day before and work until you finish.
+Here's the problem: even with little breaks, there are only so many consecutive hours of work you can manage before your intensity of focus crashes (in practice, this value is probably close to 2-3 hours for most students). Therefore, most of your time spent working features low focus, increasing the time required to accomplish the task at hand.
+Let's say, for example, that your heroic paper writing marathon takes around 10 hours (which matches my experience for a mid-sized paper written in one stretch). The following chart describes your focus over time (rating focus on a scale of 1 - 10):
+Intensity of Focus over Time for Marathon Session Approachhour 1 : 10hour 2 : 9hour 3 : 5hour 4 : 2hour 5-10 : 1
+[For math geeks, this is standard exponential decay.]
+If we take the area under this curve, we see that the pseudo-worker has accomplished: 32 units of work.
+Now let's consider another approach. Assume, instead, that you break up the paper writing into two bursts. One burst you do for two hours Saturday afternoon. The other burst you do for two hours on Sunday morning. The long gap in between ensures your focus can recharge. Following the rates of focus decay used above, your chart looks like:
+Intensity of Focus over Time for Short Burst Approachhour 1 (sat) : 10hour 2 (sat) : 9hour 3 (sun) : 10hour 4 (sun) : 9
+Clearly, this work schedule is much less painful. Just two hours at a time. And a whole day separating the two sessions. However, when we calculate the area under this curve, we see that the short burst approach accomplished: 38 units of work!
+In other words, working fewer hours, in a much less painful configuration, the short-burst accomplished more work than the marathon approach. (19% more to be exact)
+Not surprisingly, most straight-A students I interviewed, myself included, admitted to studying in short, focused bursts, with plenty of time in between to recharge. As our above example demonstrates, if you integrate focus into your work equation, it becomes plausible to accomplish more work in less time and with less pain.
+Here's the cool thing: the short-burst approach doesn't require extraordinary effort. At no point was the focus higher with this approach than it had been at some point during the marathon approach. Simply by manipulating when the studying happened, and nothing else, the productivity was significantly increased.
+Jason, a straight-A student from Penn, used the term "pseudo-work" to describe the low-focus, time-intensive marathon style of work. I think this term is apt. Pseudo-work feels like work. It's hard and time is being spent. But it's not really accomplishing much.
+It follows that one of the most important steps you can take to improve your academic performance is to eliminate all pseudo-work from your study habits. Let's conclude with some tips for putting this idea into practice.
+Tips for Eliminating Pseudo-Work
+	1	Take a ten minute break for every hour worked. This helps reduce the rate at which your focus intensity decays.
+	2	Never work more than three hours (with ten minute breaks) before taking significant time off.
+	3	Get enough sleep. Eat healthy. Exercise. These factors control your energy. Your energy impacts your focus.
+	4	Work in the morning and afternoon. Try to accomplish as much as possible before dinner. Your focus degrades quicker at night, and activities during the day will force your work into smaller bursts.
+	5	Always study in a quiet, distraction-free location. Talking roommates or a TV in the background will lower your focus.

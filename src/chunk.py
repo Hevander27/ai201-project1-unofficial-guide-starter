@@ -105,6 +105,18 @@ def _hard_split(sentence: str) -> list[str]:
     return pieces
 
 
+def is_reference(text: str) -> bool:
+    """True for bibliography/citation-dump chunks (from the academic PDFs).
+
+    These can never answer a study-skills query but rank highly on topical
+    keywords, crowding out real content. A chunk with 4+ numbered citations
+    ([1], [2], ...) or 4+ URLs/DOIs is a reference list, not prose.
+    """
+    urls = len(re.findall(r"https?://|doi\.org", text))
+    cites = len(re.findall(r"\[\d+\]", text))
+    return cites >= 4 or urls >= 4
+
+
 def main() -> None:
     files = sorted(CLEAN_DIR.glob("*.txt"))
     if not files:
@@ -113,16 +125,19 @@ def main() -> None:
 
     all_chunks = []
     per_doc = []
+    dropped = 0
     for path in files:
         doc_chunks = chunk_document(path.read_text(encoding="utf-8"))
-        for i, ch in enumerate(doc_chunks):
+        kept = [ch for ch in doc_chunks if not is_reference(ch)]
+        dropped += len(doc_chunks) - len(kept)
+        for i, ch in enumerate(kept):
             all_chunks.append({
                 "id": f"{path.stem}::{i}",
                 "source": path.stem,
                 "text": ch,
                 "n_tokens": n_tokens(ch),
             })
-        per_doc.append((path.stem, len(doc_chunks)))
+        per_doc.append((path.stem, len(kept)))
 
     CHUNKS_PATH.write_text(
         json.dumps(all_chunks, indent=2, ensure_ascii=False), encoding="utf-8"
@@ -130,7 +145,8 @@ def main() -> None:
 
     # --- report -----------------------------------------------------------
     total = len(all_chunks)
-    print(f"\nWrote {total} chunks -> {CHUNKS_PATH}\n")
+    print(f"\nWrote {total} chunks -> {CHUNKS_PATH} "
+          f"(dropped {dropped} reference/bibliography chunks)\n")
     print(f"{'document':45} {'chunks':>7}")
     print("-" * 54)
     for name, count in per_doc:

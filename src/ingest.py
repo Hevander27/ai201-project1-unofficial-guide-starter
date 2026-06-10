@@ -173,6 +173,12 @@ def main() -> None:
     RAW_DIR.mkdir(exist_ok=True)
     CLEAN_DIR.mkdir(exist_ok=True)
 
+    # Wipe derived text so raw/ and clean/ always mirror data/documents/ exactly
+    # (a renamed or removed source can't leave a stale orphan behind).
+    for d in (RAW_DIR, CLEAN_DIR):
+        for f in d.glob("*.txt"):
+            f.unlink()
+
     sources = sorted(
         p for p in DOCS_DIR.iterdir()
         if p.suffix.lower() in (".txt", ".pdf") and p.is_file()
