@@ -6,7 +6,7 @@ answer with Groq. Run the interface with `python app.py` (see the bottom of this
 
 ---
 
-[![First Project AI201](https://i.imgur.com/REPLACE_WITH_IMAGE_ID.jpg)](https://imgur.com/a/tRIZoZx)
+[![First Project AI201](https://imgur.com/vhWYNGl)](https://imgur.com/a/tRIZoZx)
 
 
 ## Domain
